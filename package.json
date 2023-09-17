@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-nodejs-crud",
+  "version": "1.0.0",
+  "description": "Coursera Project",
+  "main": "server.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdoulllahi/MongoDB-NodeJS-CRUD.git"
+  },
+  "author": "Abdallah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdoulllahi/MongoDB-NodeJS-CRUD/issues"
+  },
+  "homepage": "https://github.com/Abdoulllahi/MongoDB-NodeJS-CRUD#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
