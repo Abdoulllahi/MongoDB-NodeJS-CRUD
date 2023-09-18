@@ -1,0 +1,40 @@
+POST  http://localhost:3000/departments
+content-type: application/json
+
+{
+    "code": "PD",
+    "name": "Pediatric Dentistry"
+}
+
+###
+POST  http://localhost:3000/departments
+content-type: application/json
+
+{
+    "code": "RD",
+    "name": "Restorative Dentistry"
+}
+
+###
+POST  http://localhost:3000/departments
+content-type: application/json
+
+{
+    "code": "SU",
+    "name": "Surgery"
+}
+
+###
+POST  http://localhost:3000/departments
+content-type: application/json
+
+{
+    "code": "OR",
+    "name": "Orthodontics"
+}
+
+### 
+GET  http://localhost:3000/departments
+
+### 
+GET  http://localhost:3000/departments/6508c6589c43a8f7a5b26908

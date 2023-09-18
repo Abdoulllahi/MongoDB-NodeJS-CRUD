@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 09:41:39
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-17 15:47:04
+ * @ Modified time: 2023-09-18 16:14:36
  * @ Description:
  */
 
@@ -11,8 +11,8 @@ import { employeeSchema } from "./employees.model";
 
 
 const departmentSchema = new Schema({
-    code: String,
-    name: String,
+    code: { type: String, unique: true },
+    name: { type: String, unique: true },
     employees: [employeeSchema]
 });
 
