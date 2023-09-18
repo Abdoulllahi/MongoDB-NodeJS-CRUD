@@ -47,3 +47,6 @@ Content-Type: application/json
     "code": "DS",
     "name": "Dental Surgery"
 }
+
+###
+DELETE  http://localhost:3000/departments/6508c7329c43a8f7a5b26917

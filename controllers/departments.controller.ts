@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 16:34:58
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-18 17:21:53
+ * @ Modified time: 2023-09-18 17:47:58
  * @ Description:
  */
 
@@ -84,16 +84,28 @@ export const updateDepartmentById: RequestHandler<{ departmentId: string }, IRes
             );
             response.status(201).json({ success: true, data: result.modifiedCount });
         } catch (error) {
-
+            next(error);
         }
 
     }
 
 
 
-export const deleteDepartmentById: RequestHandler<unknown, unknown, unknown, unknown> = async (request, response, next) => {
+export const deleteDepartmentById: RequestHandler<{ departmentId: string }, IResponse<number>> =
+    async (request, response, next) => {
+        try {
+            const { departmentId } = request.params;
+            const result = await Department.deleteOne({ _id: departmentId });
+            if (!result) {
+                response.status(404).json({ success: false, data: 0, message: "Deletion failed" });
+            }
 
-}
+            response.status(202).json({ success: true, data: result.deletedCount });
+        } catch (error) {
+            next(error);
+        }
+
+    }
 
 // 1. request params
 // 2. response body
