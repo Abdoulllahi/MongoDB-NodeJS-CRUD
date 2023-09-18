@@ -38,3 +38,12 @@ GET  http://localhost:3000/departments
 
 ### 
 GET  http://localhost:3000/departments/6508c6589c43a8f7a5b26908
+
+###
+PUT  http://localhost:3000/departments/6508c7329c43a8f7a5b26917
+Content-Type: application/json
+
+{
+    "code": "DS",
+    "name": "Dental Surgery"
+}

@@ -65,3 +65,4 @@
 ::ffff:127.0.0.1 - - [18/Sep/2023:22:05:22 +0000] "GET /departments/6508c6589c43a8f7a5b26908 HTTP/1.1" 200 32 "-" "vscode-restclient"
 ::ffff:127.0.0.1 - - [18/Sep/2023:22:08:07 +0000] "GET /departments/6508c6589c43a8f7a5b26908 HTTP/1.1" 200 32 "-" "vscode-restclient"
 ::ffff:127.0.0.1 - - [18/Sep/2023:22:08:15 +0000] "GET /departments/6508c6589c43a8f7a5b26908 HTTP/1.1" 200 120 "-" "vscode-restclient"
+::ffff:127.0.0.1 - - [18/Sep/2023:22:24:21 +0000] "GET /departments HTTP/1.1" 200 680 "-" "vscode-restclient"

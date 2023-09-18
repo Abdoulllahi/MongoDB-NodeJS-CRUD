@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 16:34:58
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-18 17:10:18
+ * @ Modified time: 2023-09-18 17:21:53
  * @ Description:
  */
 
@@ -73,8 +73,19 @@ export const getDepartmentById: RequestHandler<{ departmentId: string }, IRespon
     }
 
 
-export const updateDepartmentById: RequestHandler<unknown, unknown, unknown, unknown> =
+export const updateDepartmentById: RequestHandler<{ departmentId: string }, IResponse<number>, IDepartment> =
     async (request, response, next) => {
+        try {
+            const { departmentId } = request.params;
+            const { code, name } = request.body;
+            const result = await Department.updateOne(
+                { _id: departmentId },
+                { $set: { "code": code, "name": name } }
+            );
+            response.status(201).json({ success: true, data: result.modifiedCount });
+        } catch (error) {
+
+        }
 
     }
 
