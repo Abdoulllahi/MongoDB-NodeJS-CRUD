@@ -154,3 +154,6 @@
 ::ffff:127.0.0.1 - - [19/Sep/2023:04:13:16 +0000] "GET /departments/6508c6589c43a8f7a5b26908/employees HTTP/1.1" 200 291 "-" "vscode-restclient"
 ::ffff:127.0.0.1 - - [19/Sep/2023:04:13:30 +0000] "GET /departments/6508c6589c43a8f7a5b26908/employees HTTP/1.1" 200 291 "-" "vscode-restclient"
 ::ffff:127.0.0.1 - - [19/Sep/2023:04:13:32 +0000] "DELETE /departments/6508c6589c43a8f7a5b26908/employees/65090bb3162e6d066de75b54 HTTP/1.1" 202 25 "-" "vscode-restclient"
+::ffff:127.0.0.1 - - [19/Sep/2023:04:18:45 +0000] "GET /departments/6508c6589c43a8f7a5b26908/employees HTTP/1.1" 200 291 "-" "vscode-restclient"
+::ffff:127.0.0.1 - - [19/Sep/2023:04:18:47 +0000] "DELETE /departments/6508c6589c43a8f7a5b26908/employees/65090bb3162e6d066de75b54 HTTP/1.1" 202 25 "-" "vscode-restclient"
+::ffff:127.0.0.1 - - [19/Sep/2023:04:18:50 +0000] "GET /departments/6508c6589c43a8f7a5b26908/employees HTTP/1.1" 200 158 "-" "vscode-restclient"
