@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 09:07:11
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-17 16:45:00
+ * @ Modified time: 2023-09-18 17:58:08
  * @ Description:
  */
 
@@ -13,6 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import morgan from 'morgan';
 import departmentRouter from './routers/departments.router';
+import employeeRouter from './routers/employees.router';
 
 //init
 dotenv.config();
@@ -46,6 +47,7 @@ app.use(json());
 
 //routes
 app.use('/departments', departmentRouter);
+app.use('/employees', employeeRouter);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);

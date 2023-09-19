@@ -50,3 +50,41 @@ Content-Type: application/json
 
 ###
 DELETE  http://localhost:3000/departments/6508c7329c43a8f7a5b26917
+
+###
+POST http://localhost:3000/departments/6508c6589c43a8f7a5b26908/employees
+content-type: application/json
+
+{
+    "name": { "first": "Alfred", "last": "Christensen" },
+    "email": "alfredchrist@apollonia.org",
+    "phone": "645 565 6568"
+}
+
+
+###
+POST http://localhost:3000/departments/6508c6589c43a8f7a5b26908/employees
+content-type: application/json
+
+{
+    "name": { "first": "John", "last": "Dudley" },
+    "email": "johndudley@apollonia.org",
+    "phone": "612 865 6558"
+}
+
+###
+GET http://localhost:3000/departments/6508c6589c43a8f7a5b26908/employees
+
+###
+PUT http://localhost:3000/departments/6508c6589c43a8f7a5b26908/employees/65090bb3162e6d066de75b54
+Content-Type: application/json
+
+
+    {
+    "name": { "first": "John", "last": "Dudley" },
+    "email": "johndudley@apollonia.org",
+    "phone": "612 865 6558"
+}
+
+###
+DELETE  http://localhost:3000/departments/6508c6589c43a8f7a5b26908/employees/65090bb3162e6d066de75b54

@@ -1,5 +1,5 @@
 export interface IResponse<T> {
     success: boolean,
-    message?: unknown,
+    message?: string,
     data?: T,
 }

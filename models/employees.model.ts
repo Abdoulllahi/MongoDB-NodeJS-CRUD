@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 09:41:25
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-17 18:56:00
+ * @ Modified time: 2023-09-18 21:43:25
  * @ Description:
  */
 
@@ -15,4 +15,3 @@ export const employeeSchema = new Schema({
 })
 
 export type IEmployee = InferSchemaType<typeof employeeSchema>;
-export default model<IEmployee>('Employee', employeeSchema);
