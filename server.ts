@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 09:07:11
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-18 17:58:08
+ * @ Modified time: 2023-09-20 08:40:00
  * @ Description:
  */
 
@@ -25,7 +25,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 const accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
 //Connection
-(async function () {
+(async function connectToMongoDB() {
     try {
         if (!MONGODB_URI) {
             console.log('DB URI is not defined in the environment variable');
@@ -35,7 +35,7 @@ const accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { fla
         console.log('Successfully connected to the database');
     } catch (error) {
         console.log('Connection failed', error);
-        process.exit(1);
+        setTimeout(connectToMongoDB, 5000);
     }
 })();
 
