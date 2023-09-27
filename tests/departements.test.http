@@ -1,4 +1,4 @@
-POST  http://localhost:5050/departments
+POST  http://localhost:3000/departments
 content-type: application/json
 
 {
@@ -34,7 +34,7 @@ content-type: application/json
 }
 
 ### 
-GET  http://localhost:5050/departments
+GET  http://localhost:3000/departments
 
 ### 
 GET  http://localhost:5050/departments/6508c6589c43a8f7a5b26908

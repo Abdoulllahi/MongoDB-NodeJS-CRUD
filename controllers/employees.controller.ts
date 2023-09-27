@@ -80,3 +80,20 @@ export const deleteEmployeeByDepartment: RequestHandler<{ departmentId: string, 
         }
     }
 
+    
+export const getAllEmployees: RequestHandler<unknown, IResponse<IEmployee[]>> = async (request, response, next) => {
+    try {
+        const departments = await Department.find({}, 'employees');
+        const allEmployees: IEmployee[] = [];
+        departments.forEach((department) => {
+            allEmployees.push(...department.employees);
+        });
+        response.status(200).json({
+            success: true,
+            data: allEmployees,
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+    
