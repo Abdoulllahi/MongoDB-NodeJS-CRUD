@@ -2,12 +2,13 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 09:07:11
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-20 08:40:00
+ * @ Modified time: 2023-09-27 22:43:44
  * @ Description:
  */
 
 import express, { json } from 'express';
 import * as dotenv from 'dotenv';
+import expressLayouts from 'express-ejs-layouts';
 import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
@@ -39,6 +40,13 @@ const accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { fla
     }
 })();
 
+var engine = require('ejs-mate')
+app.engine('ejs', engine);
+app.set('view engine', 'ejs');
+app.set('layout', 'layouts/boilerplate');
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use(expressLayouts);
 //middlewares
 app.use(morgan('combined', { stream: accessLog }));
 app.use(morgan('dev'));

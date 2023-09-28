@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate') %>
+    <% if (error) { %>
+        <div>Error: <%= error.message %>
+        </div>
+        <% } else { %>
+            <% for (let department of departments) { %>
+                <div>
+                    <h3>Code: <%= department.code %>
+                    </h3>
+                    <h3>Name: <%= department.name %>
+                    </h3>
+                </div>
+                <% } %>
+            <% } %>

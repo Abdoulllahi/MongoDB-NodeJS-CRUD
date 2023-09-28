@@ -2,7 +2,7 @@
  * @ Author: Abdou Lahi DIOP
  * @ Create Time: 2023-09-17 16:34:58
  * @ Modified by: Abdou Lahi DIOP
- * @ Modified time: 2023-09-27 16:09:54
+ * @ Modified time: 2023-09-27 22:10:45
  * @ Description:
  */
 
@@ -37,17 +37,17 @@ export const getDepartments: RequestHandler<unknown, IResponse<IDepartment[]>, u
         try {
             const pageNumber = request.query.page || 1;
             const pageSize = 10;
-            const results = await Department.find({}, { _v: 0 })
+            const results = await Department.find({}, { __v: 0 })
                 .sort({ _id: 1 })
                 .skip(pageSize * (pageNumber - 1))
                 .limit(pageSize);
 
-            response.status(200).json({ success: true, data: results })
+            response.status(200).render('pages/home', { departments: results, error: null, layout: 'layouts/boilerplate' });
         } catch (error) {
-            next(error);
+            response.status(500).render('pages/home', { departments: [], error: error });
         }
-
     }
+
 
 
 export const getDepartmentById: RequestHandler<{ departmentId: string }, IResponse<IDepartment>, unknown, unknown> =
